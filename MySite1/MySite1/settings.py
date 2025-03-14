@@ -12,8 +12,13 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
+import os 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+TEMPLATES_DIRS = os.path.join(BASE_DIR, "template") #declarando onde ta pasta templates esse base_dir é estrutura do nosso projeto entao estou passando que nosso template esta na raiz do nosso projeto atraves desse os.path.join
 
 
 # Quick-start development settings - unsuitable for production
@@ -55,7 +60,7 @@ ROOT_URLCONF = 'MySite1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIRS],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

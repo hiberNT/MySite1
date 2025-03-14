@@ -1,4 +1,4 @@
-import pytest 
+import pytest #configurando o teste do view to passando pra que ele deve esperar o code 200 que é o code que se espera quando o get url da certo e espera ter um Hello World 
 
 from django.urls import reverse
 

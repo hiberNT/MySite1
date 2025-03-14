@@ -12,4 +12,3 @@ class PostAdmin(admin.ModelAdmin): #passando pra aparecer uma lista desses itens
   
     
 admin.site.register(Post, PostAdmin)#fazendo o registro do post pra aparecer la no admin quando entrar no site
-
